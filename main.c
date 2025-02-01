@@ -5,8 +5,14 @@ struct User {
 	char age;
 };
 
+struct User create_user(char *name, int age)
+{
+	struct User user = {name, age};
+	return user;
+}
+
 int main()
 {
-	struct User user = {"Xurshid", 16};
-	printf("User name: %s", user.name);
+	struct User user = create_user("Xurshid", 16);
+	printf("%s", user.name);
 }
